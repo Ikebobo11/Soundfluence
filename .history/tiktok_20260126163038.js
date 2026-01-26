@@ -73,17 +73,22 @@ function handleOrder(event, pkgName, amount) {
     }, 1500);
 }
 function sendToWhatsApp() {
+  // Your specific WhatsApp Number
   const phoneNumber = "2348052894765"; 
 
+  // Pulling text from your H1 IDs
   const quantity = document.getElementById('Quantity').innerText;
   const productLink = document.getElementById('Link').innerText;
 
-  // Added \n after the quantity so the Link moves to the next line
-  const message = `Order Request:\n` +
-                  `Quantity: ${quantity}\n` + 
+  // Formatting the message
+  // *Text* = Bold in WhatsApp | %0A = New Line
+  const message = `Order Request:\` +
+                  `Quantity: ${quantity}` +
                   `Link: ${productLink}`;
 
+  // Constructing the final URL
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
+  // Opening WhatsApp
   window.open(whatsappUrl, '_blank').focus();
 }
