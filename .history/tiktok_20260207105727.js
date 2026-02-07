@@ -96,47 +96,33 @@ function handleOrder(event, pkgName, amount) {
 // }
 
 
-function payWithPaystack(packageName, price) {
-    // 1. Get the values from your input boxes
-    // Make sure these IDs match the ones in your HTML!
-    const customerEmail = document.getElementById('email-input').value;
-    const tiktokLink = document.getElementById('link-input').value;
+function payWithPaystack() {
+  // 1. Grab the values the user typed into your boxes
+  const userEmail = document.getElementById('email-input-id').value;
+  const tikTokLink = document.getElementById('tiktok-link-id').value;
+  
+  // 2. Set up the Paystack checkout
+  let handler = PaystackPop.setup({
+    key: 'pk_test_xxxxxxxxxx', // Your Public Key
+    email: userEmail,           // Use the email they typed
+    amount: 8000 * 100,         // 8000 Naira in kobo
+    
+    // 3. PACK THE SUITCASE WITH YOUR DATA
+    metadata: {
+      package: "25 Sound Uses",
+      tiktok_link: tikTokLink,  // This saves the link they typed!
+      referrer: window.location.href
+    },
 
-    if (!customerEmail || !tiktokLink) {
-        alert("Please enter your email and TikTok link!");
-        return;
+    callback: function(response) {
+      // This happens AFTER they pay successfully
+      alert('Payment successful! Ref: ' + response.reference);
+      // You can redirect them to a "Thank You" page here
+    },
+    onClose: function() {
+      alert('Window closed.');
     }
+  });
 
-    // 2. This is the Paystack Magic
-    const handler = PaystackPop.setup({
-        key: 'pk_test_fe95cf63ac38561f84089576baead4626f164da8', // <--- PUT YOUR KEY HERE
-        email: customerEmail,
-        amount: price * 100, // Converts Naira to Kobo
-        currency: 'NGN',
-        metadata: {
-            custom_fields: [
-                {
-                    display_name: "Package",
-                    variable_name: "package",
-                    value: packageName
-                },
-                {
-                    display_name: "TikTok Link",
-                    variable_name: "tiktok_link",
-                    value: tiktokLink
-                }
-            ]
-        },
-        callback: function(response) {
-            // This runs after they pay!
-            alert('Payment Successful! Transaction Ref: ' + response.reference);
-            window.location.href = "success.html"; // Send them to a success page
-        },
-        onClose: function() {
-            alert('You closed the window before finishing payment.');
-        }
-    });
-
-    // 3. THIS IS THE LINE THAT WAS MISSING OR FAILING
-    handler.openIframe(); 
+  handler.openIframe();
 }

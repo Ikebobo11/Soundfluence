@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TikTok Promotion | Soundfluence</title>
-    <script src="https://js.paystack.co/v1/inline.js"></script>
     <link rel="stylesheet" href="tiktok.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
@@ -67,10 +66,9 @@
                     <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
                     <form class="order-form" onsubmit="handleOrder(event, 'Basic 25 Uses', '25000')">
                         <label>TikTok Sound Link</label>
-                        <input id="link-input"  type="url" required placeholder="https://vm.tiktok.com/...">
-                        <label>Email</label>
-                        <input id="email-input"  type="email" required placeholder="yourname@gmail.com">
-                        <button type="button" class="btn-submit" onclick="payWithPaystack('Basic Package', 5000)">Proceed to Payment</button>
+                        <input id="Link"  type="url" required placeholder="https://vm.tiktok.com/...">
+                        
+                        <button type="submit" class="btn-submit" onclick="sendToWhatsApp()">Proceed to Payment</button>
                     </form>
                 </div>
                 <!-- Package 2 -->

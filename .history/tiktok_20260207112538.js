@@ -109,7 +109,7 @@ function payWithPaystack(packageName, price) {
 
     // 2. This is the Paystack Magic
     const handler = PaystackPop.setup({
-        key: 'pk_test_fe95cf63ac38561f84089576baead4626f164da8', // <--- PUT YOUR KEY HERE
+        key: '', // <--- PUT YOUR KEY HERE
         email: customerEmail,
         amount: price * 100, // Converts Naira to Kobo
         currency: 'NGN',

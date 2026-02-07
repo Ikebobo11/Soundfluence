@@ -72,71 +72,18 @@ function handleOrder(event, pkgName, amount) {
         
     }, 1500);
 }
-// function sendToWhatsApp() {
-//   const phoneNumber = "2348052894765"; 
+function sendToWhatsApp() {
+  const phoneNumber = "2348052894765"; 
 
-//   // Use getElementById carefully - ensure these IDs exist on your page!
-//   const quantityElement = document.getElementById('Quantity');
-//   const linkElement = document.getElementById('Link');
+  const quantity = document.getElementById('Quantity').innerText;
+  const productLink = document.getElementById('Link').innerText;
 
-//   // We check if the elements exist first so the code doesn't crash
-//   const quantity = quantityElement ? quantityElement.innerText.trim() : "Not found";
-//   const productLink = linkElement ? linkElement.innerText.trim() : "No Link";
+  // Added \n after the quantity so the Link moves to the next line
+  const message = `Order Request:\n` +
+                  `Quantity: ${quantity}\n` + 
+                  `Link: ${productLink}`;
 
-//   // IMPORTANT: Use backticks (`) and hit ENTER on your keyboard 
-//   // to create the lines. This is better than using \n with +.
-//   const message = `Order Request:
-// Quantity: ${quantity}
-// Link: ${productLink}`;
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-//   // encodeURIComponent translates those 'Enters' into %0A for the URL
-//   const whatsappUrl = `https://api.whatsapp.com/send/?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
-
-//   window.open(whatsappUrl, '_blank').focus();
-// }
-
-
-function payWithPaystack(packageName, price) {
-    // 1. Get the values from your input boxes
-    // Make sure these IDs match the ones in your HTML!
-    const customerEmail = document.getElementById('email-input').value;
-    const tiktokLink = document.getElementById('link-input').value;
-
-    if (!customerEmail || !tiktokLink) {
-        alert("Please enter your email and TikTok link!");
-        return;
-    }
-
-    // 2. This is the Paystack Magic
-    const handler = PaystackPop.setup({
-        key: 'pk_test_fe95cf63ac38561f84089576baead4626f164da8', // <--- PUT YOUR KEY HERE
-        email: customerEmail,
-        amount: price * 100, // Converts Naira to Kobo
-        currency: 'NGN',
-        metadata: {
-            custom_fields: [
-                {
-                    display_name: "Package",
-                    variable_name: "package",
-                    value: packageName
-                },
-                {
-                    display_name: "TikTok Link",
-                    variable_name: "tiktok_link",
-                    value: tiktokLink
-                }
-            ]
-        },
-        callback: function(response) {
-            // This runs after they pay!
-            alert('Payment Successful! Transaction Ref: ' + response.reference);
-            window.location.href = "success.html"; // Send them to a success page
-        },
-        onClose: function() {
-            alert('You closed the window before finishing payment.');
-        }
-    });
-
-    // 3. THIS IS THE LINE THAT WAS MISSING OR FAILING
-    handler.openIframe(); 
+  window.open(whatsappUrl, '_blank').focus();
 }
