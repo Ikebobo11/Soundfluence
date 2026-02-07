@@ -101,7 +101,7 @@ function payWithPaystack(packageName, price) {
     // Make sure these IDs match the ones in your HTML!
     const customerEmail = document.getElementById('email-input').value;
     const tiktokLink = document.getElementById('link-input').value;
-    // const microQuantity = document.getElementById('micro-quantity').value;
+    const microcQuantity = document.getElementById('micro-quantity').value;
 
     if (!customerEmail || !tiktokLink) {
         alert("Please enter your email and TikTok link!");
@@ -110,7 +110,7 @@ function payWithPaystack(packageName, price) {
 
     // 2. This is the Paystack Magic
     const handler = PaystackPop.setup({
-        key: 'pk_test_69f3fbc0be1d066414308d2862003c626c96c983', // <--- PUT YOUR KEY HERE
+        key: 'pk_test_fe95cf63ac38561f84089576baead4626f164da8', // <--- PUT YOUR KEY HERE
         email: customerEmail,
         amount: price * 100, // Converts Naira to Kobo
         currency: 'NGN',
@@ -125,12 +125,7 @@ function payWithPaystack(packageName, price) {
                     display_name: "TikTok Link",
                     variable_name: "tiktok_link",
                     value: tiktokLink
-                },
-                //   {
-                //     display_name: "Quantity",
-                //     variable_name: "Quantity",
-                //     value: microQuantity
-                // },
+                }
             ]
         },
         callback: function(response) {
