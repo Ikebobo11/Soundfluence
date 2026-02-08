@@ -135,8 +135,8 @@ function payWithPaystack(packageName, price) {
         },
         callback: function(response) {
             // This runs after they pay!
-            alert('Your order has been submitted and will be completed within 24-48 hours. Reference:  + response.reference');
-            window.location.href = "index.html"; // Send them to a success page
+            alert('Your order has been submitted and will be completed within 24-48 hours. Reference: ' + response.reference');
+            window.location.href = "success.html"; // Send them to a success page
         },
         onClose: function() {
             alert('You closed the window before finishing payment.');
