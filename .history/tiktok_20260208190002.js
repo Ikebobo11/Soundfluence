@@ -99,8 +99,8 @@ function handleOrder(event, pkgName, amount) {
 function payWithPaystack(packageName, price) {
     // 1. Get the values from your input boxes
     // Make sure these IDs match the ones in your HTML!
-    const customerEmail = document.querySelector('.email-input').value;
-    const tiktokLink = document.querySelector('.link-input').value;
+    const customerEmail = document.getElementById('email-input').value;
+    const tiktokLink = document.getElementById('link-input').value;
     // const microQuantity = document.getElementById('micro-quantity').value;
 
     if (!customerEmail || !tiktokLink) {
@@ -126,12 +126,17 @@ function payWithPaystack(packageName, price) {
                     variable_name: "tiktok_link",
                     value: tiktokLink
                 },
+                //   {
+                //     display_name: "Quantity",
+                //     variable_name: "Quantity",
+                //     value: microQuantity
+                // },
             ]
         },
         callback: function(response) {
             // This runs after they pay!
             alert('Your order has been submitted and will be completed within 24-48 hours. Reference:  + response.reference');
-            window.location.href = "index.html"; // Send them to a success page
+            window.location.href = ""; // Send them to a success page
         },
         onClose: function() {
             alert('You closed the window before finishing payment.');

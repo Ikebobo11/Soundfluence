@@ -126,6 +126,11 @@ function payWithPaystack(packageName, price) {
                     variable_name: "tiktok_link",
                     value: tiktokLink
                 },
+                //   {
+                //     display_name: "Quantity",
+                //     variable_name: "Quantity",
+                //     value: microQuantity
+                // },
             ]
         },
         callback: function(response) {

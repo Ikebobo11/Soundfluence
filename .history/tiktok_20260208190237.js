@@ -126,6 +126,7 @@ function payWithPaystack(packageName, price) {
                     variable_name: "tiktok_link",
                     value: tiktokLink
                 },
+        
             ]
         },
         callback: function(response) {

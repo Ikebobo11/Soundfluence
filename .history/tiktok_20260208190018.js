@@ -99,8 +99,8 @@ function handleOrder(event, pkgName, amount) {
 function payWithPaystack(packageName, price) {
     // 1. Get the values from your input boxes
     // Make sure these IDs match the ones in your HTML!
-    const customerEmail = document.querySelector('.email-input').value;
-    const tiktokLink = document.querySelector('.link-input').value;
+    const customerEmail = document.qu('email-input').value;
+    const tiktokLink = document.getElementById('link-input').value;
     // const microQuantity = document.getElementById('micro-quantity').value;
 
     if (!customerEmail || !tiktokLink) {
@@ -126,6 +126,11 @@ function payWithPaystack(packageName, price) {
                     variable_name: "tiktok_link",
                     value: tiktokLink
                 },
+                //   {
+                //     display_name: "Quantity",
+                //     variable_name: "Quantity",
+                //     value: microQuantity
+                // },
             ]
         },
         callback: function(response) {

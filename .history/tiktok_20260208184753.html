@@ -67,9 +67,9 @@
                     <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
                     <form class="order-form" onsubmit="handleOrder(event, 'Basic 25 Uses', '25000')">
                         <label>TikTok Sound Link</label>
-                        <input class="link-input"  type="url" required placeholder="https://vm.tiktok.com/...">
+                        <input id="link-input"  type="url" required placeholder="https://vm.tiktok.com/...">
                         <label>Email</label>
-                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <input id="email-input"  type="email" required placeholder="yourname@gmail.com">
                         <button type="button" class="btn-submit" onclick="payWithPaystack('Basic Package', 8000)">Proceed to Payment</button>
                     </form>
                 </div>
@@ -82,10 +82,10 @@
                     <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
                     <form class="order-form" onsubmit="handleOrder(event, 'Basic 50 Uses', '45000')">
                         <label>TikTok Sound Link</label>
-                        <input  class="link-input" type="url" required placeholder="https://vm.tiktok.com/...">
+                        <input type="url"  required placeholder="https://vm.tiktok.com/...">
                         <label>Email</label>
-                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
-                        <button type="button" class="btn-submit" onclick="payWithPaystack('Basic Package', 14000)">Proceed to Payment</button>
+                        <input id="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="submit" class="btn-submit">Proceed to Payment</button>
                     </form>
                 </div>
                  <!-- Package 3 -->
@@ -97,10 +97,8 @@
                     <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
                     <form class="order-form" onsubmit="handleOrder(event, 'Basic 100 Uses', '85000')">
                         <label>TikTok Sound Link</label>
-                        <input class="link-input" type="url" required placeholder="https://vm.tiktok.com/...">
-                        <label>Email</label>
-                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
-                        <button type="button" class="btn-submit" onclick="payWithPaystack('Basic Package', 26000)">Proceed to Payment</button>
+                        <input type="url" required placeholder="https://vm.tiktok.com/...">
+                        <button type="submit" class="btn-submit">Proceed to Payment</button>
                     </form>
                 </div>
                 <!-- Package 4 -->
