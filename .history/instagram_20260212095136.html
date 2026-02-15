@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <title>Instagram Promotion | Soundfluence</title>
+    <link rel="stylesheet" href="instagram.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SOUNDFLUENCE</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tiktok.html">TikTok Promotion</a></li>
+            <li><a href="instagram.html" class="active">Instagram Promotion</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="tiktok.html">TikTok Promotion</a>
+        <a href="instagram.html">Instagram Promotion</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Instagram Reels Sound Promotion</h1>
+            <p>Make your sound go viral on Instagram Reels by connecting with creators who use your audio in high-engagement content designed to boost reach and discovery</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="section-tabs">
+            <button class="tab-btn active" onclick="scrollToSection('basic')">Basic</button>
+            <button class="tab-btn" onclick="scrollToSection('custom')">Custom</button>
+            <button class="tab-btn" onclick="scrollToSection('public')">Public Figures</button>
+        </div>
+
+        <!-- BASIC SECTION -->
+        <section id="basic" class="package-section">
+            <h2 class="section-title">Basic Reels Packages</h2>
+            <div class="info-box">
+                <p>This package uses community-based influencer task groups to spread your sound naturally. Creators engage randomly and produce content in their own style without instructions. Content quality varies, but this method is effective for wide sound exposure and viral trend discovery.</p>
+            </div>
+            
+            <div class="grid-layout">
+                <!-- 5 Basic Packages for IG Example -->
+                <div class="package-card">
+                    <div class="pkg-header"><h3>25 Influencer Sound Use</h3><span class="price">₦8,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'IG Basic 25', '30000')">
+                        <label>Reel/Sound Link</label>
+                        <input class="link-input"  type="url" required placeholder="https://instagram.com/reels/audio...">
+                        <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, ' Basic 25 Sound Uses', 8000)">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card">
+                    <div class="pkg-header"><h3>50 Influencer Sound Use</h3><span class="price">₦14,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'IG Basic 50', '55000')">
+                        <label>Reel/Sound Link</label>
+                        <input class="link-input"  type="url" required>
+                        <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, 'Basic 50 Sound Uses', 14000)">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card">
+                    <div class="pkg-header"><h3>100 Influencer Sound Use</h3><span class="price">₦26,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'IG Basic 100', '100000')">
+                        <label>Reel/Sound Link</label>
+                        <input class="link-input" type="url" required>
+                        <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, ' Basic 100 Sound Uses', 26000)">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card">
+                    <div class="pkg-header"><h3>200 Influencer Sound Use</h3><span class="price">₦50,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'IG Basic 200', '190000')">
+                        <label>Reel/Sound Link</label>
+                        <input class="link-input" type="url" required>
+                        <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, ' Basic 200 Sound Uses', 50000)">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card">
+                    <div class="pkg-header"><h3>500 Influencer Sound Use</h3><span class="price">₦114,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'IG Basic 500', '450000')">
+                        <label>Reel/Sound Link</label>
+                        <input class="link-input" type="url" required>
+                        <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, ' Basic 500 Sound Uses', 114000)">Proceed to Payment</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- CUSTOM SECTION -->
+        <section id="custom" class="package-section">
+            <h2 class="section-title">Custom Influencer Sound Use Campaigns</h2>
+            <div class="info-box info-orange">
+                <p>Influencers with 5k-20k followers. Full creative control over instructions, captions, and tagging.</p>
+            </div>
+            
+            <div class="grid-layout">
+                 <div class="package-card custom-card">
+                    <div class="pkg-header"><h3>25 Custom Influencer Sound Use</h3><span class="price">₦125,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'IG Custom 5', '90000')">
+                        <input class="link-input" type="url" required placeholder="Sound Link">
+                        <input class="email-input"  type="email" required placeholder="Email">
+                        <input class="hashtags-input"  type="text" required placeholder="Hashtags">
+                        <input class="caption-input" type="text" required placeholder="Caption">
+                        <textarea  class="instuction-input"  required placeholder="Detailed Instructions (Dance, Skit, etc)"></textarea>
+                        <button  type="button" class="btn-submit"  onclick="payWithPaystack(this, 'Custom 25 Sound Uses', 125000)">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card custom-card">
+                    <div class="pkg-header"><h3>50 Custom Influencer Sound Use</h3><span class="price">₦250,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'IG Custom 10', '170000')">
+                       <input class="link-input" type="url" required placeholder="Sound Link">
+                        <input class="email-input"  type="email" required placeholder="Email">
+                        <input class="hashtags-input"  type="text" required placeholder="Hashtags">
+                        <input class="caption-input" type="text" required placeholder="Caption">
+                        <textarea  class="instuction-input"  required placeholder="Detailed Instructions (Dance, Skit, etc)"></textarea>
+                        <button  type="button" class="btn-submit"  onclick="payWithPaystack(this, 'Custom 50 Sound Uses', 250000)">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                 <div class="package-card custom-card">
+                    <div class="pkg-header"><h3>100 Custom Influencer Sound Use</h3><span class="price">₦500,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'IG Custom 20', '320000')">
+                        <input class="link-input" type="url" required placeholder="Sound Link">
+                        <input class="email-input"  type="email" required placeholder="Email">
+                        <input class="hashtags-input"  type="text" required placeholder="Hashtags">
+                        <input class="caption-input" type="text" required placeholder="Caption">
+                        <textarea  class="instuction-input"  required placeholder="Detailed Instructions (Dance, Skit, etc)"></textarea>
+                        <button  type="button" class="btn-submit"  onclick="payWithPaystack(this, 'Custom 100 Sound Uses', 500000)">Proceed to Payment</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- PUBLIC FIGURES -->
+        <section id="public" class="package-section">
+            <h2 class="section-title">Instagram Public Figures (300k - 1M+ Followers) (High Reach)</h2>
+            <div class="info-box">
+                <p>Top tier Instagram personalities for maximum exposure. Manual outreach required. Delivery may take up to 1 week. If influencers do not respond, you will be notified via email and a refund will be issued.</p>
+            </div>
+            
+            <div class="influencer-grid">
+                <!-- Influencer 1 -->
+                <div class="influencer-card">
+                    <img src="./image/WhatsApp Image 2026-01-25 at 17.46.21.jpeg" alt="Influencer">
+                    <div class="inf-details">
+                        <h4>Afroblueries</h4>
+                        <a href="https://www.instagram.com/afroblueries?igsh=MTRzYjJtbHpyeGM5cw==" class="handle">@afroblueries</a>
+                        <p class="price">₦500,000 Per Video</p>
+                        <button class="btn-order" onclick="toggleForm(this)">Select Influencer</button>
+                        <form class="order-form" onsubmit="handleOrder(event, 'IG Star: Jenny', '300000')">
+                             <input type="url" required placeholder="Sound Link">
+                             <input type="text" required placeholder="Your Email">
+                             <button type="submit" class="btn-submit">Proceed to Payment</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Influencer 2 -->
+                <div class="influencer-card">
+                    <img src="./image/graino2.jpg" alt="Influencer">
+                    <div class="inf-details">
+                        <h4>Gracino</h4>
+                        <a href="https://www.instagram.com/gracino_?igsh=MTBxOXl4emdlY3Vnbw==" class="handle">@gracino_</a>
+                        <p class="price">₦1,600,000 Per Video</p>
+                        <button class="btn-order" onclick="toggleForm(this)">Select Influencer</button>
+                        <form class="order-form" onsubmit="handleOrder(event, 'IG Star: David', '450000')">
+                             <input type="url" required placeholder="Sound Link">
+                             <input type="text" required placeholder="Your Email">
+                             <button type="submit" class="btn-submit">Proceed to Payment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Soundfluence. All rights reserved.</p>
+    </footer>
+
+    <script src="instagram.js"></script>
+</body>
+</html>

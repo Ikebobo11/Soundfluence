@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Promotion | Soundfluence</title>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <link rel="stylesheet" href="tiktok.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SOUNDFLUENCE</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tiktok.html" class="active">TikTok Promotion</a></li>
+            <li><a href="instagram.html">Instagram Promotion</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="tiktok.html">TikTok Promotion</a>
+        <a href="instagram.html">Instagram Promotion</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>TikTok Sound Use Promotion</h1>
+            <p>Boost your sound visibility by having creators use your sound organically or professionally depending on your selected package.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Navigation Tabs for Sections -->
+        <div class="section-tabs">
+            <button class="tab-btn active" onclick="scrollToSection('basic')">Basic</button>
+            <button class="tab-btn" onclick="scrollToSection('premium')">Premium</button>
+            <button class="tab-btn" onclick="scrollToSection('custom')">Custom</button>
+            <button class="tab-btn" onclick="scrollToSection('public')">Public Figures</button>
+        </div>
+
+        <!-- BASIC SECTION -->
+        <section id="basic" class="package-section">
+            <h2 class="section-title">Basic Influencers Sound Use</h2>
+            <div class="info-box">
+                <p>For This Basic influencer Packages, The influencers come from community-based task groups. Users engage with your sound randomly and create content in their own unique way. No instructions are given. Quality varies. Best for increased sound circulation and viral transitions.</p>
+            </div>
+            
+            <div class="grid-layout" id="basic-grid">
+                <!-- Javascript will populate this, but per instructions using HTML structure here repeatedly for clarity -->
+                <!-- Package 1 -->
+                <div class="package-card">
+                    <div class="pkg-header">
+                        <h3 id="micro-quantity">25 Sound Uses</h3>
+                        <span class="price">₦8,000</span>
+                    </div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Basic 25 Uses', '25000')">
+                        <label>TikTok Sound Link</label>
+                        <input class="link-input"  type="url" required placeholder="https://vm.tiktok.com/...">
+                        <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, '25 Sound Uses', 8000)">Proceed to Payment</button>
+                    </form>
+                </div>
+                <!-- Package 2 -->
+                <div class="package-card">
+                    <div class="pkg-header">
+                        <h3>50 Sound Uses</h3>
+                        <span class="price">₦14,000</span>
+                    </div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Basic 50 Uses', '45000')">
+                        <label>TikTok Sound Link</label>
+                        <input  class="link-input" type="url" required placeholder="https://vm.tiktok.com/...">
+                        <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, '50 Sound Uses', 14000)">Proceed to Payment</button>
+                    </form>
+                </div>
+                 <!-- Package 3 -->
+                 <div class="package-card">
+                    <div class="pkg-header">
+                        <h3>100 Sound Uses</h3>
+                        <span class="price">₦26,000</span>
+                    </div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Basic 100 Uses', '85000')">
+                        <label>TikTok Sound Link</label>
+                        <input class="link-input" type="url" required placeholder="https://vm.tiktok.com/...">
+                        <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, '100 Sound Uses', 26000)">Proceed to Payment</button>
+                    </form>
+                </div>
+                <!-- Package 4 -->
+                <div class="package-card">
+                    <div class="pkg-header">
+                        <h3>150 Sound Uses</h3>
+                        <span class="price">₦38,000</span>
+                    </div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Basic 150 Uses', '120000')">
+                        <label>TikTok Sound Link</label>
+                        <input class="link-input" type="url" required placeholder="https://vm.tiktok.com/...">
+                        <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit"  onclick="payWithPaystack(this, '150 Sound Uses', 38000)">Proceed to Payment</button>
+                    </form>
+                </div>
+                <!-- Package 5 -->
+                <div class="package-card">
+                    <div class="pkg-header">
+                        <h3>200 Sound Uses</h3>
+                        <span class="price">₦50,000</span>
+                    </div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Basic 200 Uses', '160000')">
+                        <label>TikTok Sound Link</label>
+                        <input class="link-input" type="url" required placeholder="https://vm.tiktok.com/...">
+                        <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, '200 Sound Uses', 50000)">Proceed to Payment</button>
+                    </form>
+                </div>
+                <!-- Package 6 -->
+                <div class="package-card">
+                    <div class="pkg-header">
+                        <h3>300 Sound Uses</h3>
+                        <span class="price">₦86,000</span>
+                    </div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Basic 300 Uses', '230000')">
+                        <label>TikTok Sound Link</label>
+                        <input class="link-input" type="url" required placeholder="https://vm.tiktok.com/...">
+                        <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, '300 Sound Uses', 86000)">Proceed to Payment</button>
+                    </form>
+                </div>
+                <!-- Package 7 -->
+                <div class="package-card">
+                    <div class="pkg-header">
+                        <h3>400 Sound Uses</h3>
+                        <span class="price">₦98,000</span>
+                    </div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Basic 400 Uses', '300000')">
+                        <label>TikTok Sound Link</label>
+                        <input class="link-input" type="url" required placeholder="https://vm.tiktok.com/...">
+                        <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit" class="btn-submit" onclick="payWithPaystack(this, '400 Sound Uses', 98000)">Proceed to Payment</button>
+                    </form>
+                </div>
+                <!-- Package 8 -->
+                <div class="package-card">
+                    <div class="pkg-header">
+                        <h3>600 Sound Uses</h3>
+                        <span class="price">₦170,000</span>
+                    </div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Basic 600 Uses', '450000')">
+                        <label>TikTok Sound Link</label>
+                        <input class="link-input"  type="url" required placeholder="https://vm.tiktok.com/...">
+                         <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit" class="btn-submit" onclick="payWithPaystack(this, '600 Sound Uses', 170000)">Proceed to Payment</button>
+                    </form>
+                </div>
+                <!-- Package 9 -->
+                <div class="package-card">
+                    <div class="pkg-header">
+                        <h3>800 Sound Uses</h3>
+                        <span class="price">₦194,000</span>
+                    </div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Basic 800 Uses', '600000')">
+                        <label>TikTok Sound Link</label>
+                        <input class="link-input"  type="url" required placeholder="https://vm.tiktok.com/...">
+                         <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit" class="btn-submit" onclick="payWithPaystack(this, '800 Sound Uses', 194000)">Proceed to Payment</button>
+                    </form>
+                </div>
+                <!-- Package 10 -->
+                <div class="package-card">
+                    <div class="pkg-header">
+                        <h3>1,000 Sound Uses</h3>
+                        <span class="price">₦264,000</span>
+                    </div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Basic 1000 Uses', '750000')">
+                        <label>TikTok Sound Link</label>
+                        <input  class="link-input"  type="url" required placeholder="https://vm.tiktok.com/...">
+                         <label>Email</label>
+                        <input class="email-input"  type="email" required placeholder="yourname@gmail.com">
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, '1000 Sound Uses', 264000)">Proceed to Payment</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- PREMIUM SECTION -->
+        <section id="premium" class="package-section">
+            <h2 class="section-title">Premium Influencers Sound Use</h2>
+            <div class="info-box info-purple">
+                <p>Selectively picked influencers (500–5,000+ followers) who strictly follow instructions on captions and hashtags. Content is well-structured, professional, and focused on driving real engagement and sound usage for music promotion.</p>
+            </div>
+            
+            <div class="grid-layout">
+                <!-- 10 Premium Packages -->
+                <div class="package-card premium-card">
+                    <div class="pkg-header"><h3>25 Premium Influencer Sound Use</h3><span class="price">₦23,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Premium 25 Uses', '50000')">
+                        <input class="link-input" type="url" required placeholder="Sound Link">
+                        <input class="email-input"  type="email" required placeholder="Email">
+                        <input class="hashtags-input" type="text" required placeholder="Hashtags (e.g. #NewMusic)">
+                        <textarea class="caption-input" required placeholder="Caption Instruction"></textarea>
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, 'Premium 25 Sound Uses', 23000)">Proceed to Payment</button>
+                    </form>
+                </div>
+                
+                <div class="package-card premium-card">
+                    <div class="pkg-header"><h3>50 Premium Influencer Sound Use</h3><span class="price">₦45,500</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Premium 50 Uses', '95000')">
+                        <input class="link-input" type="url" required placeholder="Sound Link">
+                        <input class="email-input"  type="email" required placeholder="Email">
+                        <input type="text" required placeholder="Hashtags">
+                        <textarea required placeholder="Caption Instruction"></textarea>
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, 'Premium 50 Sound Uses', 45000)">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card premium-card">
+                    <div class="pkg-header"><h3>100 Premium Influencer Sound Use</h3><span class="price">₦90,500</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Premium 100 Uses', '180000')">
+                        <input class="link-input" type="url" required placeholder="Sound Link">
+                        <input class="email-input"  type="email" required placeholder="Email">
+                        <input type="text" required placeholder="Hashtags">
+                        <textarea required placeholder="Caption Instruction"></textarea>
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, 'Premium 100 Sound Uses', 90000)">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card premium-card">
+                    <div class="pkg-header"><h3>200 Premium Influencer Sound Use</h3><span class="price">₦180,500</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Premium 200 Uses', '350000')">
+                        <input class="link-input" type="url" required placeholder="Sound Link">
+                        <input class="email-input"  type="email" required placeholder="Email">
+                        <input type="text" required placeholder="Hashtags">
+                        <textarea required placeholder="Caption Instruction"></textarea>
+                        <button type="button" class="btn-submit" onclick="payWithPaystack(this, 'Premium 200 Sound Uses', 4500)">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card premium-card">
+                    <div class="pkg-header"><h3>300 Premium Influencer Sound Use</h3><span class="price">₦270,500</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Premium 300 Uses', '500000')">
+                        <input type="url" required placeholder="Sound Link">
+                        <input type="text" required placeholder="Hashtags">
+                        <textarea required placeholder="Caption Instruction"></textarea>
+                        <button type="submit" class="btn-submit">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card premium-card">
+                    <div class="pkg-header"><h3>400 Premium Influencer Sound Use</h3><span class="price">₦360,500</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Premium 400 Uses', '650000')">
+                        <input type="url" required placeholder="Sound Link">
+                        <input type="text" required placeholder="Hashtags">
+                        <textarea required placeholder="Caption Instruction"></textarea>
+                        <button type="submit" class="btn-submit">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card premium-card">
+                    <div class="pkg-header"><h3>500 Premium Influencer Sound Use</h3><span class="price">₦450,500</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Premium 500 Uses', '800000')">
+                        <input type="url" required placeholder="Sound Link">
+                        <input type="text" required placeholder="Hashtags">
+                        <textarea required placeholder="Caption Instruction"></textarea>
+                        <button type="submit" class="btn-submit">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card premium-card">
+                    <div class="pkg-header"><h3>700 Premium Influencer Sound Use</h3><span class="price">₦630,500</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Premium 700 Uses', '1100000')">
+                        <input type="url" required placeholder="Sound Link">
+                        <input type="text" required placeholder="Hashtags">
+                        <textarea required placeholder="Caption Instruction"></textarea>
+                        <button type="submit" class="btn-submit">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card premium-card">
+                    <div class="pkg-header"><h3>900 Premium Influencer Sound Use</h3><span class="price">₦810,500</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Premium 900 Uses', '1400000')">
+                        <input type="url" required placeholder="Sound Link">
+                        <input type="text" required placeholder="Hashtags">
+                        <textarea required placeholder="Caption Instruction"></textarea>
+                        <button type="submit" class="btn-submit">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card premium-card">
+                    <div class="pkg-header"><h3>1,000 Premium Influencer Sound Use</h3><span class="price">₦900,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Premium 1000 Uses', '1600000')">
+                        <input type="url" required placeholder="Sound Link">
+                        <input type="text" required placeholder="Hashtags">
+                        <textarea required placeholder="Caption Instruction"></textarea>
+                        <button type="submit" class="btn-submit">Proceed to Payment</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- CUSTOM SECTION -->
+        <section id="custom" class="package-section">
+            <h2 class="section-title">Custom Influencers (3k - 10k Followers)</h2>
+            <div class="info-box info-orange">
+                <p>High-quality creators. You control how they perform, dance style, lip-sync, captions, tagging, POVs, and overall content direction.</p>
+            </div>
+            
+            <div class="grid-layout">
+                <!-- 5 Custom Packages -->
+                 <div class="package-card custom-card">
+                    <div class="pkg-header"><h3>25 Custom Influencers</h3><span class="price">₦125,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Custom 5 Inf', '75000')">
+                        <input type="url" required placeholder="Sound Link">
+                        <input type="text" required placeholder="Hashtags">
+                        <input type="text" required placeholder="Caption">
+                        <textarea required placeholder="Detailed Instructions (Dance, Skit, etc)"></textarea>
+                        <button type="submit" class="btn-submit">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card custom-card">
+                    <div class="pkg-header"><h3>50 Custom Influencers</h3><span class="price">₦250,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Custom 10 Inf', '140000')">
+                        <input type="url" required placeholder="Sound Link">
+                        <input type="text" required placeholder="Hashtags">
+                        <input type="text" required placeholder="Caption">
+                        <textarea required placeholder="Detailed Instructions"></textarea>
+                        <button type="submit" class="btn-submit">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card custom-card">
+                    <div class="pkg-header"><h3>100 Custom Influencers</h3><span class="price">₦500,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Custom 20 Inf', '260000')">
+                        <input type="url" required placeholder="Sound Link">
+                        <input type="text" required placeholder="Hashtags">
+                        <input type="text" required placeholder="Caption">
+                        <textarea required placeholder="Detailed Instructions"></textarea>
+                        <button type="submit" class="btn-submit">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card custom-card">
+                    <div class="pkg-header"><h3>150 Custom Influencers</h3><span class="price">₦750,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Custom 50 Inf', '600000')">
+                        <input type="url" required placeholder="Sound Link">
+                        <input type="text" required placeholder="Hashtags">
+                        <input type="text" required placeholder="Caption">
+                        <textarea required placeholder="Detailed Instructions"></textarea>
+                        <button type="submit" class="btn-submit">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="package-card custom-card">
+                    <div class="pkg-header"><h3>200 Custom Influencers</h3><span class="price">₦1,000,000</span></div>
+                    <button class="btn-order" onclick="toggleForm(this)">Order Now</button>
+                    <form class="order-form" onsubmit="handleOrder(event, 'Custom 100 Inf', '1150000')">
+                        <input type="url" required placeholder="Sound Link">
+                        <input type="text" required placeholder="Hashtags">
+                        <input type="text" required placeholder="Caption">
+                        <textarea required placeholder="Detailed Instructions"></textarea>
+                        <button type="submit" class="btn-submit">Proceed to Payment</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- PUBLIC FIGURES -->
+        <section id="public" class="package-section">
+            <h2 class="section-title">Public Figures (500k - 2M+ Followers)</h2>
+            <div class="info-box">
+                <p>Manual outreach required. Delivery may take up to 1 week. If influencers do not respond, you will be notified via email and a refund will be issued.</p>
+            </div>
+            
+            <div class="influencer-grid">
+                <!-- Influencer 1 -->
+                <div class="influencer-card">
+                    <img src="./image/graino2.jpg" alt="Influencer">
+                    <div class="inf-details">
+                        <h4>Gracino</h4>
+                        <a href="https://www.tiktok.com/@gracino___?_r=1&_t=ZS-93McDQgyHCR" class="handle">@gracino___</a>
+                        <p class="price">₦2,000,000 Per video</p>
+                        <button class="btn-order" onclick="toggleForm(this)">Select Influencer</button>
+                        <form class="order-form" onsubmit="handleOrder(event, 'Influencer: Sarah Dance', '250000')">
+                             <input type="url" required placeholder="Sound Link">
+                             <input type="text" required placeholder="Your Email">
+                             <button type="submit" class="btn-submit">Proceed to Payment</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Influencer 2 -->
+                <div class="influencer-card">
+                    <img src="./image/seun pizze.jpeg" alt="Influencer">
+                    <div class="inf-details">
+                        <h4>Seun Pizzle</h4>
+                        <a href="https://www.tiktok.com/@seunpizzle_1?_r=1&_t=ZS-93MeSJSAEul" class="handle">@seunpizzle_1</a>
+                        <p class="price">₦2,000,000 Per video</p>
+                        <button class="btn-order" onclick="toggleForm(this)">Select Influencer</button>
+                        <form class="order-form" onsubmit="handleOrder(event, 'Influencer: Mike Moves', '350000')">
+                             <input type="url" required placeholder="Sound Link">
+                             <input type="text" required placeholder="Your Email">
+                             <button type="submit" class="btn-submit">Proceed to Payment</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Influencer 3 -->
+                <div class="influencer-card">
+                    <img src="./image/image (2).png" alt="Influencer">
+                    <div class="inf-details">
+                        <h4>Purple Speedy</h4>
+                        <a href="https://www.tiktok.com/@purplespeedy?_r=1&_t=ZS-93MhMxGe26s" class="handle">@purplespeedy</a>
+                        <p class="price">₦5,000,000 Per video</p>
+                        <button class="btn-order" onclick="toggleForm(this)">Select Influencer</button>
+                        <form class="order-form" onsubmit="handleOrder(event, 'Influencer: Bella Vibe', '180000')">
+                             <input type="url" required placeholder="Sound Link">
+                             <input type="text" required placeholder="Your Email">
+                             <button type="submit" class="btn-submit">Proceed to Payment</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Influencer 4 -->
+                <div class="influencer-card">
+                    <img src="./crips.jpg" alt="Influencer">
+                    <div class="inf-details">
+                        <h4>Crispdal</h4>
+                        <a href="https://www.tiktok.com/@crispdal?_r=1&_t=ZS-93MjTm3zRyB" class="handle">@crispdal</a>
+                        <p class="price">₦5,000,000 Per video</p>
+                        <button class="btn-order" onclick="toggleForm(this)">Select Influencer</button>
+                        <form class="order-form" onsubmit="handleOrder(event, 'Influencer: King Tunde', '500000')">
+                             <input type="url" required placeholder="Sound Link">
+                             <input type="text" required placeholder="Your Email">
+                             <button type="submit" class="btn-submit">Proceed to Payment</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Influencer 5 -->
+                <div class="influencer-card">
+                    <img src="./image/rash.jpeg" alt="Influencer">
+                    <div class="inf-details">
+                        <h4>Rashidat Momoh</h4>
+                        <a href="https://www.tiktok.com/@justrashidat22f?_r=1&_t=ZS-93Mkf6ZvcEk" class="handle">@justrashidat22f</a>
+                        <p class="price">₦1,700,000 Per video</p>
+                        <button class="btn-order" onclick="toggleForm(this)">Select Influencer</button>
+                        <form class="order-form" onsubmit="handleOrder(event, 'Influencer: Urban Flow', '400000')">
+                             <input type="url" required placeholder="Sound Link">
+                             <input type="text" required placeholder="Your Email">
+                             <button type="submit" class="btn-submit">Proceed to Payment</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Soundfluence. All rights reserved.</p>
+    </footer>
+
+    <script src="tiktok.js"></script>
+</body>
+</html>
